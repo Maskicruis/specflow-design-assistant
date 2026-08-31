@@ -253,7 +253,7 @@ def test_graph_removed_query_and_workflow_remain():
     html=client.get('/').text
     assert 'data-nav="graph"' not in html
     assert 'data-nav="workflow"' in html and 'data-nav="query"' in html
-    assert client.get('/api/health').json()['version']=='1.1.0'
+    assert client.get('/api/health').json()['version']=='1.01'
 
 
 def test_portable_backup_contains_database_and_sources_but_no_env(tmp_path,monkeypatch):

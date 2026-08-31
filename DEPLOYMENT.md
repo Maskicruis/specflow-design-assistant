@@ -1,5 +1,7 @@
 # 部署、迁移与更新
 
+适用发布版本：**1.01**。项目使用 **AGPL-3.0-or-later** 开源许可证，具体条款见 [LICENSE](LICENSE)。
+
 ## 1. 两种安装方式
 
 推荐 **Git 克隆**，方便后续增量更新。仓库地址：
@@ -8,7 +10,7 @@
 https://github.com/Maskicruis/specflow-design-assistant
 ```
 
-仓库为私有，需要使用有权限的 GitHub 账号；其他账号需由仓库所有者在 GitHub 添加访问权限。不应为了下载而把密钥放进克隆 URL。身份验证参考 [GitHub 官方克隆说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)。
+仓库公开开源，通过 HTTPS 克隆或下载源码无需 GitHub 账号。向原仓库推送更改仍需维护权限；外部贡献者可通过 Fork 和 Pull Request 提交修改。克隆操作参考 [GitHub 官方说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)。不要在克隆 URL 中放入密钥。
 
 也可以从 GitHub 下载源代码 ZIP，但 ZIP 不带 Git 历史，不能运行自动更新脚本；后续需下载新版本并迁移本地资料。因此需要持续更新时应使用 Git。
 
@@ -101,7 +103,7 @@ Git 安装版本双击 `更新程序.cmd`，或执行：
 
 | 现象 | 检查 |
 |---|---|
-| 克隆提示 Repository not found | 仓库为私有，确认当前 GitHub 身份有访问权限 |
+| 无法克隆或提示 Repository not found | 核对公开仓库 URL、网络和代理；HTTPS 下载无需登录 |
 | 找不到 Python 3.13 | 安装对应版本，重新打开终端；可手工运行 `python -m venv .venv` |
 | 服务无法启动 | 查看 `work/server-error.log`；确认安装依赖成功、8765 端口未被其他安装占用 |
 | 已有旧版服务占用端口 | 停止旧目录对应的 Python 服务。新启动器不会自动结束其他安装 |

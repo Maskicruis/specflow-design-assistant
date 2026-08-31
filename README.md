@@ -1,6 +1,8 @@
 # 规序 SpecFlow · 规范辅助设计工作台
 
-面向工程设计人员的本地多模态 RAG 应用：导入 PDF / Word，按设计阶段检索规范，生成附来源的参考回答，并回到原文复核。**v1.1 已移除知识图谱展示，专注于规范辅助设计。**
+面向工程设计人员的本地多模态 RAG 应用：导入 PDF / Word，按设计阶段检索规范，生成附来源的参考回答，并回到原文复核。**v1.01 已移除知识图谱展示，专注于规范辅助设计。**
+
+当前发布版本为 **1.01**，代码按 **AGPL-3.0-or-later** 开源，公开仓库可直接克隆。许可证全文见 [LICENSE](LICENSE)，第三方依赖及规范资料的权利边界见 [NOTICES.md](NOTICES.md)。
 
 ## 先看这三份说明
 
@@ -10,7 +12,7 @@
 
 ## Windows 快速开始
 
-先安装 **Python 3.13（64 位）** 和 **Git**。使用具有仓库权限的 GitHub 账号克隆：
+先安装 **Python 3.13（64 位）** 和 **Git**。公开仓库无需登录 GitHub 即可通过 HTTPS 克隆：
 
 ```powershell
 git clone https://github.com/Maskicruis/specflow-design-assistant.git

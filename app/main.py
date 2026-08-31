@@ -13,7 +13,7 @@ from .ontology import STAGES
 from .models import call_model, validate_endpoint, ModelError
 
 store.init()
-app=FastAPI(title='规序 SpecFlow · 规范辅助设计工作台',version='1.1.0')
+app=FastAPI(title='规序 SpecFlow · 规范辅助设计工作台',version='1.01')
 
 @app.middleware('http')
 async def local_guard(request:Request,call_next):
@@ -32,7 +32,7 @@ async def local_guard(request:Request,call_next):
 
 @app.get('/api/health')
 def health():
-    return {'status':'ok','app':'SpecFlow','version':'1.1.0','pid':os.getpid(),'instance':store.INSTANCE}
+    return {'status':'ok','app':'SpecFlow','version':'1.01','pid':os.getpid(),'instance':store.INSTANCE}
 
 @app.get('/api/bootstrap')
 def bootstrap():
